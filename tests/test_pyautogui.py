@@ -37,7 +37,7 @@ class CalculatorAutomationTest(unittest.TestCase):
 
     def test_programmer_mode(self):
         #navigate to programmer mode
-        num = 10.5
+        num = 10
         calculator_object.click_to_navigate()
         calculator_object.click_to_mode('Programmer Calculator')
 
@@ -49,7 +49,7 @@ class CalculatorAutomationTest(unittest.TestCase):
         calculator_object.click_to_display_values('HEX')
         self.assertEqual(hex(num).upper()[2:], calculator_object.get_calculator_result())
         calculator_object.click_to_display_values('DEC')
-        self.assertEqual(num, calculator_object.get_calculator_result())
+        self.assertEqual(str(num), calculator_object.get_calculator_result())
         calculator_object.click_to_display_values('OCT')
         self.assertEqual(oct(num)[2:], calculator_object.get_calculator_result())
         calculator_object.click_to_display_values('BIN')
