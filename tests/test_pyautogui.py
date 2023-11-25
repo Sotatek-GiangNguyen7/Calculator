@@ -33,9 +33,16 @@ class CalculatorAutomationTest(unittest.TestCase):
         self.assertEqual(str(a + b), calculator_object.get_calculator_result() ,"Test Addition Failed")
 
     def test_programmer_mode(self):
+        #navigate to programmer mode
+        num = 10
         calculator_object.click_to_navigate()
         calculator_object.click_to_mode('Programmer Calculator')
-        calculator_object.enter_number(100)
+
+        #input number to calculator
+        calculator_object.enter_number(num)
+
+        #verify result
+        self.assertEqual(hex(num), calculator_object.get_calculator_result())
 
         self.assertEqual()
     def test_subtraction(self):
