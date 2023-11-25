@@ -4,7 +4,7 @@ import uiautomation as automation
 
 class Calculator(): 
     def get_windows(self):
-        self.calculator_window = automation.WindowControl(searchDepth=1, Name="Calculator")
+        self.calculator_window = automation.WindowControl(searchDepth=2, Name="Calculator")
 
     def perform_calculation(self, operand1, operator, operand2, result):
         pyautogui.press(str(operand1))
@@ -16,6 +16,8 @@ class Calculator():
         self.calculator_window.ButtonControl(Name ="Open Navigation").Click()
     def click_to_mode(self, mode):
         self.calculator_window.ListItemControl(Name = mode).Click()
+    def click_to_display_values(self,display_values):
+        self.calculator_window.TextControl(Name = display_values).Click()
 
     def get_calculator_result(self):
         result_control = self.calculator_window.PaneControl(automation ='TextContainer')
