@@ -17,9 +17,9 @@ class CalculatorAutomationTest(unittest.TestCase):
         time.sleep(2)
         calculator_object.get_windows()
 
-    def tearDown(self):
-        # Close the Calculator window
-        pyautogui.hotkey('alt', 'f4')
+    # def tearDown(self):
+    #     # Close the Calculator window
+    #     pyautogui.hotkey('alt', 'f4')
 
     def test_addition(self):
         calculator_object.click_to_navigate()
@@ -33,7 +33,9 @@ class CalculatorAutomationTest(unittest.TestCase):
     def test_programmer_mode(self):
         calculator_object.click_to_navigate()
         calculator_object.click_to_mode('Programmer Calculator')
+        calculator_object.enter_number(100)
 
+        self.assertEqual()
     def test_subtraction(self):
         calculator_object.click_to_navigate()
         calculator_object.click_to_mode('Standard Calculator')
