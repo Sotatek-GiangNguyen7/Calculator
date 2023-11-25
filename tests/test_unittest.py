@@ -3,6 +3,7 @@ import pyautogui
 import uiautomation as automation
 import time
 
+
 class CalculatorAutomationTest(unittest.TestCase):
 
     def setUp(self):

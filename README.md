@@ -31,23 +31,36 @@ This is the quick and easy getting started assuming you already have git, Visual
 ```sh
 
 Open Terminal window in Visual Code (ctrl + `) then execute command:
-pip install -r requirements.txt
+pip install -r requirements.txt 
+or run 
+make install
 
 Or go to project root folder then open CMD windows and execute command:
 pip install -r requirements.txt
+or run 
+make install
 
 ```
 
 ## Run Tests
-
-
-
 
 ```sh
 first navigate to the tests directory using
 cd tests
 then run command
 python file_name.py
+or run
+make test
+
+```
+
+## Run Report
+
+```sh
+using 
+make report
+or 
+pytest tests/ --html-report=./report
 ```
 
 

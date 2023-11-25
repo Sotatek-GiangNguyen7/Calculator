@@ -4,6 +4,8 @@ import uiautomation as automation
 import time
 from calculator import Calculator
 
+
+
 calculator_object = Calculator()
 class CalculatorAutomationTest(unittest.TestCase):
 

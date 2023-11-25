@@ -1,6 +1,7 @@
 import pyautogui
 import uiautomation as automation
 
+
 class Calculator(): 
     def get_windows(self):
         self.calculator_window = automation.WindowControl(searchDepth=1, Name="Calculator")
@@ -28,3 +29,4 @@ class Calculator():
     def get_calculator_hex_result(self, number):
         result_control = self.calculator_window.PaneControl(automation ='TextContainer')
         return result_control.Name
+    
