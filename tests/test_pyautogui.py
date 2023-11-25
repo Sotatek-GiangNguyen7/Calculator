@@ -35,7 +35,6 @@ class CalculatorAutomationTest(unittest.TestCase):
         calculator_object.click_to_mode('Programmer Calculator')
 
     def test_subtraction(self):
-        calculator_object = Calculator()
         a = 8 
         b = 3
         calculator_object.perform_calculation(a, "-", b, a - b)
