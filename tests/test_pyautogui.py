@@ -1,13 +1,13 @@
-
 from decimal import Decimal
 import decimal
 import unittest
 import pyautogui
 import uiautomation as automation
 import time
-from calculator import Calculator
-
-
+from common.helper.calculator import Calculator
+from source.data_programmer_mode import test_data_programmer_mode
+from source.data_operation import test_data_standard_mode
+from parameterized import parameterized
 
 calculator_object = Calculator()
 class CalculatorAutomationTest(unittest.TestCase):
@@ -26,18 +26,18 @@ class CalculatorAutomationTest(unittest.TestCase):
         # Close the Calculator window
         pyautogui.hotkey('alt', 'f4')
 
-    def test_addition(self):
+    @parameterized.expand(test_data_standard_mode)
+    def test_standard_mode(self, a, operator, b):
         calculator_object.click_to_navigate()
         calculator_object.click_to_mode('Standard Calculator')
-        a = 5
-        b = 3  
-        calculator_object.perform_calculation(a, "+", b, a + b)
-        # Verify result
-        self.assertEqual(str(a + b), calculator_object.get_calculator_result() ,"Test Addition Failed")
 
-    def test_programmer_mode(self):
+        calculator_object.perform_calculation(a, operator, b)
+        # Verify result
+        self.assertEqual(str(eval(f"{a} {operator} {b}")), calculator_object.get_calculator_result() ,"Test Addition Failed")
+
+    @parameterized.expand(test_data_programmer_mode)
+    def test_programmer_mode(self, num):
         #navigate to programmer mode
-        num = 10
         calculator_object.click_to_navigate()
         calculator_object.click_to_mode('Programmer Calculator')
 
@@ -54,15 +54,6 @@ class CalculatorAutomationTest(unittest.TestCase):
         self.assertEqual(oct(num)[2:], calculator_object.get_calculator_result())
         calculator_object.click_to_display_values('BIN')
         self.assertEqual(bin(num)[2:], calculator_object.get_calculator_result())
-
-    def test_subtraction(self):
-        calculator_object.click_to_navigate()
-        calculator_object.click_to_mode('Standard Calculator')
-        a = 8 
-        b = 3
-        calculator_object.perform_calculation(a, "-", b, a - b)
-        # Verify result
-        self.assertEqual(str(a - b), calculator_object.get_calculator_result())
 
 if __name__ == '__main__':
     unittest.main()

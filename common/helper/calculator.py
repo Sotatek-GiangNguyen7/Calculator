@@ -5,12 +5,27 @@ import uiautomation as automation
 class Calculator(): 
     def get_windows(self):
         self.calculator_window = automation.WindowControl(searchDepth=2, Name="Calculator")
+    
 
-    def perform_calculation(self, operand1, operator, operand2, result):
-        pyautogui.press(str(operand1))
+    def perform_calculation(self, operand1, operator, operand2):
+        self.enter_first_number(operand1)
+        self.enter_operator(operator)
+        self.enter_second_number(operand2)
+        self.get_result()
+
+    def enter_first_number(self, operand1):
+        for char in str(operand1):
+            pyautogui.press(str(char))
+            
+    def enter_operator(self, operator):
         pyautogui.press(operator)
-        pyautogui.press(str(operand2))
-        pyautogui.press("=")  
+        
+    def enter_second_number(self, operand2):
+        for char in str(operand2):
+            pyautogui.press(str(char))
+            
+    def get_result(self):
+        pyautogui.press("=")
 
     def click_to_navigate(self):
         self.calculator_window.ButtonControl(Name ="Open Navigation").Click()
@@ -26,9 +41,3 @@ class Calculator():
     def enter_number(self, number):
         for char in str(number):
             pyautogui.press(char)
-
-
-    def get_calculator_hex_result(self, number):
-        result_control = self.calculator_window.PaneControl(automation ='TextContainer')
-        return result_control.Name
-    
