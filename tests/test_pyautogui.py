@@ -28,7 +28,7 @@ class CalculatorAutomationTest(unittest.TestCase):
         b = 3  
         calculator_object.perform_calculation(a, "+", b, a + b)
         # Verify result
-        self.assertEqual(str(a + b), calculator_object.get_calculator_result())
+        self.assertEqual(str(a + b), calculator_object.get_calculator_result() ,"Test Addition Failed")
 
     def test_programmer_mode(self):
         calculator_object.click_to_navigate()
@@ -39,7 +39,7 @@ class CalculatorAutomationTest(unittest.TestCase):
         calculator_object.click_to_mode('Standard Calculator')
         a = 8 
         b = 3
-        calculator_object.perform_calculation(a, "-", b, a - b)
+        calculator_object.perform_calculation(a, "-", b, a - b, "Test Subtraction Failed")
         # Verify result
         self.assertEqual(str(a - b), calculator_object.get_calculator_result())
 
