@@ -16,7 +16,15 @@ class Calculator():
     def click_to_mode(self, mode):
         self.calculator_window.ListItemControl(Name = mode).Click()
 
-    
     def get_calculator_result(self):
+        result_control = self.calculator_window.PaneControl(automation ='TextContainer')
+        return result_control.Name
+    
+    def enter_number(self, number):
+        for char in str(number):
+            pyautogui.press(char)
+
+
+    def get_calculator_hex_result(self, number):
         result_control = self.calculator_window.PaneControl(automation ='TextContainer')
         return result_control.Name
