@@ -1,0 +1,36 @@
+2023-11-25 00:01:54.668 test_unittest.py[55] click_calculator_button -> Find Control Timeout(10s): {Name: '5', ControlType: ButtonControl}
+2023-11-25 00:09:12.790 test_unittest.py[55] click_calculator_button -> Find Control Timeout(10s): {Name: '2', ControlType: ButtonControl}
+2023-11-25 00:34:44.466 test_unittest.py[55] click_calculator_button -> Find Control Timeout(10s): {Name: 'Two', ControlType: ButtonControl}
+2023-11-25 00:34:59.458 test_unittest.py[55] click_calculator_button -> Find Control Timeout(10s): {Name: 'Two', ControlType: ButtonControl}
+2023-11-25 00:35:40.239 test_unittest.py[55] click_calculator_button -> Find Control Timeout(10s): {Name: '2', ControlType: ButtonControl}
+2023-11-25 00:35:57.450 test_unittest.py[55] click_calculator_button -> Find Control Timeout(10s): {Name: '2', ControlType: ButtonControl}
+2023-11-25 00:44:05.212 test_unittest.py[55] click_calculator_button -> Find Control Timeout(10s): {Name: '2', ControlType: ButtonControl}
+2023-11-25 00:48:23.481 test_unittest.py[55] click_calculator_button -> Find Control Timeout(10s): {Name: '2', ControlType: TextControl}
+2023-11-25 00:48:37.374 test_unittest.py[55] click_calculator_button -> Find Control Timeout(10s): {Name: '2', ControlType: TextControl}
+2023-11-25 00:49:27.414 test_unittest.py[55] click_calculator_button -> Find Control Timeout(10s): {Name: '2', ControlType: ButtonControl}
+2023-11-25 00:49:52.150 test_unittest.py[55] click_calculator_button -> Find Control Timeout(10s): {Name: '2', ControlType: ButtonControl}
+2023-11-25 00:52:52.729 test_unittest.py[55] click_calculator_button -> Find Control Timeout(10s): {Name: '2', ControlType: ButtonControl}
+2023-11-25 00:54:11.381 test_unittest.py[55] click_calculator_button -> Find Control Timeout(10s): {Name: '2', ControlType: ButtonControl}
+2023-11-25 01:02:56.028 test_unittest.py[55] click_calculator_button -> Find Control Timeout(10s): {Name: '2', ControlType: ButtonControl}
+2023-11-25 01:04:57.468 test_unittest.py[55] click_calculator_button -> Find Control Timeout(10s): {Name: '2', ControlType: ButtonControl}
+2023-11-25 01:05:07.614 test_unittest.py[22] tearDown -> Find Control Timeout(10s): {Name: 'Close Calculator', ControlType: ButtonControl}
+2023-11-25 01:05:25.112 test_unittest.py[55] click_calculator_button -> Find Control Timeout(10s): {Name: '2', ControlType: ButtonControl}
+2023-11-25 01:05:35.253 test_unittest.py[22] tearDown -> Find Control Timeout(10s): {Name: 'Close Calculator', ControlType: ButtonControl}
+2023-11-25 01:08:00.246 test_unittest.py[55] click_calculator_button -> Find Control Timeout(10s): {Name: '2', ControlType: ButtonControl}
+2023-11-25 01:08:14.116 test_unittest.py[55] click_calculator_button -> Find Control Timeout(10s): {Name: '2', ControlType: ButtonControl}
+2023-11-25 01:10:48.830 test_unittest.py[55] click_calculator_button -> Find Control Timeout(10s): {Name: '2', ControlType: ButtonControl}
+2023-11-25 01:14:42.609 test_unittest.py[35] test -> Find Control Timeout(10s): {Name: '关闭', ControlType: ButtonControl}
+2023-11-25 01:16:35.457 test_unittest.py[55] click_calculator_button -> Find Control Timeout(10s): {Name: '2', ControlType: ButtonControl}
+2023-11-25 01:20:33.690 test_unittest.py[58] click_calculator_button -> Find Control Timeout(10s): {Name: '2', ControlType: ButtonControl}
+2023-11-25 09:36:53.175 test_unittest.py[58] click_calculator_button -> Find Control Timeout(10s): {Name: '2', ControlType: ButtonControl}
+2023-11-25 09:37:48.432 test_unittest.py[58] click_calculator_button -> Find Control Timeout(10s): {Name: '2', ControlType: ButtonControl}
+2023-11-25 09:38:38.774 test_unittest.py[58] click_calculator_button -> Find Control Timeout(10s): {Name: '2', ControlType: ButtonControl}
+2023-11-25 09:39:11.358 test_unittest.py[58] click_calculator_button -> Find Control Timeout(10s): {Name: '5', ControlType: ButtonControl}
+2023-11-25 09:44:30.420 test_unittest.py[55] click_calculator_button -> Find Control Timeout(10s): {Name: '5', ControlType: ButtonControl}
+2023-11-25 09:46:11.938 test_unittest.py[56] click_calculator_button -> Find Control Timeout(10s): {Name: '5', ControlType: ButtonControl}
+2023-11-25 09:49:43.432 test_unittest.py[54] click_calculator_button -> Find Control Timeout(10s): {Name: '5', ControlType: ButtonControl}
+2023-11-25 09:50:05.200 test_unittest.py[54] click_calculator_button -> Find Control Timeout(10s): {Name: '5', ControlType: ButtonControl}
+2023-11-25 11:05:30.672 test_pyautogui.py[40] get_calculator_result -> Find Control Timeout(10s): {ClassName: 'CalculatorResults', ControlType: TextControl}
+2023-11-25 11:13:26.376 test_pyautogui.py[40] get_calculator_result -> Find Control Timeout(10s): {ControlType: PaneControl}
+2023-11-25 11:17:28.437 test_pyautogui.py[40] get_calculator_result -> Find Control Timeout(10s): {ControlType: PaneControl}
+2023-11-25 11:19:33.129 test_pyautogui.py[40] get_calculator_result -> Find Control Timeout(10s): {automation: 'TextContainer', ControlType: TextControl}
