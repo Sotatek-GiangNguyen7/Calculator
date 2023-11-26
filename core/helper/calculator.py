@@ -52,3 +52,7 @@ class Calculator():
             num_str = str(binary_string)
 
         return num_str
+    def add_space(self,number_str):
+        reversed_number = number_str[::-1]  
+        result = " ".join(reversed_number[i:i+3] for i in range(0, len(reversed_number), 3))
+        return result[::-1]  

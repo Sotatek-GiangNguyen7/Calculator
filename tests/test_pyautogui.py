@@ -47,9 +47,9 @@ class CalculatorAutomationTest(unittest.TestCase):
         calculator_object.click_to_display_values('HEX')
         self.assertEqual(hex(num).upper()[2:], calculator_object.get_calculator_result())
         calculator_object.click_to_display_values('DEC')
-        self.assertEqual(str(num), calculator_object.get_calculator_result())
+        self.assertEqual(str(num), calculator_object.get_calculator_result().replace(',', ''))
         calculator_object.click_to_display_values('OCT')
-        self.assertEqual(oct(num)[2:], calculator_object.get_calculator_result())
+        self.assertEqual(calculator_object.add_space(oct(num)[2:]), calculator_object.get_calculator_result())
         calculator_object.click_to_display_values('BIN')
         self.assertEqual(calculator_object.binary_format(num), calculator_object.get_calculator_result().replace(' ', ''))
 
