@@ -5,9 +5,14 @@ import pyautogui
 import uiautomation as automation
 import time
 import subprocess
-from core.helper.calculator import Calculator
-from source.data_programmer_mode import test_data_programmer_mode
-from source.data_operation import test_data_standard_mode
+import xmlrunner
+import HtmlTestRunner
+import sys
+sys.path.append('core/helper/')
+sys.path.append('source/')
+from calculator import Calculator
+from data_programmer_mode import test_data_programmer_mode
+from data_operation import test_data_standard_mode
 from parameterized import parameterized
 automation.uiautomation.SetGlobalSearchTimeout(15)
 calculator_object = Calculator()
