@@ -6,3 +6,6 @@ test:
 
 report:
 	pytest tests/ --html-report=./report
+
+unittest:
+	python -m unittest tests/test_pyautogui.py 

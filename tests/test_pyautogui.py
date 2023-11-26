@@ -5,7 +5,7 @@ import pyautogui
 import uiautomation as automation
 import time
 import subprocess
-from common.helper.calculator import Calculator
+from core.helper.calculator import Calculator
 from source.data_programmer_mode import test_data_programmer_mode
 from source.data_operation import test_data_standard_mode
 from parameterized import parameterized
