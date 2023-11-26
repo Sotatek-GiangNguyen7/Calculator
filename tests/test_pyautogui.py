@@ -4,11 +4,12 @@ import unittest
 import pyautogui
 import uiautomation as automation
 import time
+import subprocess
 from common.helper.calculator import Calculator
 from source.data_programmer_mode import test_data_programmer_mode
 from source.data_operation import test_data_standard_mode
 from parameterized import parameterized
-
+automation.uiautomation.SetGlobalSearchTimeout(15)
 calculator_object = Calculator()
 class CalculatorAutomationTest(unittest.TestCase):
 
@@ -17,11 +18,8 @@ class CalculatorAutomationTest(unittest.TestCase):
         pyautogui.press('win')
         pyautogui.write('Calculator')
         pyautogui.press('enter')
-
-        # Wait for the Calculator to open
-        time.sleep(2)
         calculator_object.get_windows()
-
+        time.sleep(1)
     def tearDown(self):
         # Close the Calculator window
         pyautogui.hotkey('alt', 'f4')
@@ -53,7 +51,7 @@ class CalculatorAutomationTest(unittest.TestCase):
         calculator_object.click_to_display_values('OCT')
         self.assertEqual(oct(num)[2:], calculator_object.get_calculator_result())
         calculator_object.click_to_display_values('BIN')
-        self.assertEqual(bin(num)[2:], calculator_object.get_calculator_result())
+        self.assertEqual(calculator_object.binary_format(num), calculator_object.get_calculator_result().replace(' ', ''))
 
 if __name__ == '__main__':
     unittest.main()

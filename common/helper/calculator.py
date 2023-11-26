@@ -5,8 +5,6 @@ import uiautomation as automation
 class Calculator(): 
     def get_windows(self):
         self.calculator_window = automation.WindowControl(searchDepth=2, Name="Calculator")
-    
-
     def perform_calculation(self, operand1, operator, operand2):
         self.enter_first_number(operand1)
         self.enter_operator(operator)
@@ -41,3 +39,16 @@ class Calculator():
     def enter_number(self, number):
         for char in str(number):
             pyautogui.press(char)
+    def binary_format(self, num):
+        binary_string = bin(num)[2:]
+        remainder = len(binary_string) % 4
+        if remainder == 1:
+            num_str = '000' + str(binary_string)
+        elif remainder == 2:
+            num_str = '00' + str(binary_string)
+        elif remainder == 3:
+            num_str = '0' + str(binary_string)
+        else:
+            num_str = str(binary_string)
+
+        return num_str
